@@ -1,0 +1,9 @@
+.nav {
+  grid-area: n;
+  background-color: rgb(39, 243, 165);
+
+}
+
+.item {
+  font-size: 20px;
+}
