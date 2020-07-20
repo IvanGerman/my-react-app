@@ -1,0 +1,14 @@
+#first_image {
+  height: 25vh;
+}
+#first_image img {
+  max-height: 100%;
+  width: 100%;
+}
+
+.descriptionBlock {
+  padding: 10px;
+}
+.descriptionBlock img {
+  max-width: 15vw;
+}
