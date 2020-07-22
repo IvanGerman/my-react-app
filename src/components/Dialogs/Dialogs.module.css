@@ -5,14 +5,18 @@
 
 .dialog  a {
     text-decoration: none;
-    color: black;
+    color: rgb(5, 5, 5);
 }
+
+/* a.active.dialog {
+    color:  rgb(180, 22, 22);
+}  */
 
 .dialogsItems {
     padding: 10px;
 }
 
-.dialogsItems .active {
+.dialogsItems .active  {
     color: gold;
 }
 
