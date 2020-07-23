@@ -2,6 +2,8 @@
   grid-area: n;
   background-color: rgb(126, 103, 207);
   padding: 20px;
+  width: 14vw;
+  
 }
 
 .item {
@@ -16,3 +18,35 @@
 .item a.active {
   color: rgb(250, 246, 2);
 }
+
+.friends {
+  color: white;
+  font-size: 2vw;
+  margin-bottom: 15px;
+}
+.orangesquare {
+  overflow: hidden;
+  margin: 0px 5px 0px;
+}
+.orangesquare img{
+  width: 3vw;
+  border-radius: 30px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.orangesquare div{
+  font-size: 1.2vw;
+  max-width: 100%;
+  text-align: center;
+}
+.nameandsquare {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  
+}
+
+
+
+
+

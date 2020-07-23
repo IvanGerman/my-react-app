@@ -8,13 +8,37 @@
     color: rgb(5, 5, 5);
 }
 
-/* a.active.dialog {
-    color:  rgb(180, 22, 22);
-}  */
-
+.active.dialog img{
+    width: 30px;
+    border-radius: 30px;
+    margin-right: 10px;
+}  
 .dialogsItems {
     padding: 10px;
 }
+
+.message img {
+    width: 20px;
+    border-radius: 50px;
+}
+.message span {
+    padding: 0px 5px 0px;
+}
+.message2 img {
+    width: 20px;
+    border-radius: 50px;
+}
+.message2 span {
+    padding: 0px 5px 0px;
+}
+
+.message {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+
+
 
 .dialogsItems .active  {
     color: gold;

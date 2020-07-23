@@ -5,11 +5,11 @@ import ProfileInfo from './ProfileInfo/ProfileInfo';
 console.log("s = ", s);
 
 
-const Profile = () => {
+const Profile = (props) => {
     return (
       <div>
         <ProfileInfo />
-        <MyPosts />
+        <MyPosts posts = {props.state.posts}/>
       </div>
     )
 };
