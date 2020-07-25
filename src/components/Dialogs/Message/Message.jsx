@@ -6,8 +6,8 @@ const Message = (props) => {
     
     
     return (
-        <div className = {s[props.kls]}>
-            <img alt = "" src = {props.kls2} />
+        <div className = {s.message}>
+            
             <span>{props.message}</span>
         </div> 
     )

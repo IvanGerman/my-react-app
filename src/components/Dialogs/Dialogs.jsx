@@ -27,27 +27,16 @@ import Message from './Message/Message';
 //     <Message key = {i} message = {m.message} /> );
 
 const Dialogs = (props) => {
-    let x;
-    let y;
+    
 
     let dialogsElements = props.state.dialogs.map ( (d, i) => 
         <DialogItem key = {i} name = {d.name} id = {d.id} /> );
-    let messagesElements = props.state.messages.map ( (m, i) => { 
-        
-        if (i % 2 === 0) {
-            
-            x = "message2";
-            y = "https://www.kindpng.com/picc/m/34-349083_round-germany-flag-png-transparent-image-circle-german.png";
-            } else {
-                x = "message";
-                y = "https://cdn1.iconfinder.com/data/icons/flags-of-the-world-2/128/england-circle-512.png";
-            };
 
+    let messagesElements = props.state.messages.map ( (m, i) => { 
         return (
-        <Message key = {i} message = {m.message} kls = {x} kls2 = {y}/> );
+        <Message key = {i} message = {m.message} /> );
      }
-        
-        ); 
+    ); 
 
     return (
         <div className = {s.dialogs}>

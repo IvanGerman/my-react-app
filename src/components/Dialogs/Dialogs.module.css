@@ -13,45 +13,16 @@
     border-radius: 30px;
     margin-right: 10px;
 }  
+
 .dialogsItems {
     padding: 10px;
 }
-
-.message img {
-    width: 20px;
-    border-radius: 50px;
-}
-.message span {
-    padding: 0px 5px 0px;
-}
-.message2 img {
-    width: 20px;
-    border-radius: 50px;
-}
-.message2 span {
-    padding: 0px 5px 0px;
-}
-
-.message {
-    display: flex;
-    flex-direction: row-reverse;
-}
-
-
-
-
 .dialogsItems .active  {
     color: gold;
 }
 
-.dialogsItems .dialog {
-
-}
 
 .messages {
     padding: 10px;
 }
 
-.messages .message {
-
-}

@@ -1,16 +1,13 @@
 import React from 'react';
 import s from './Navbar.module.css';
 import { NavLink } from 'react-router-dom';
-import CircleName from './CircleName/CircleName';
+
 
 
 
 
 const Navbar = (props) => {
   
-  let allCircleNames = props.state.circlenames.map( (c, i) =>
-  <CircleName key = {i} circlenames = {c.circlenames} />
-  );
   
   return (
      <nav className = {s.nav}>
@@ -31,15 +28,7 @@ const Navbar = (props) => {
         </div>
 
 
-        <br/><br/><br/><br/>
-        <div>
-          <div className = {s.friends}>Friends</div>
-          <div className = {s.nameandsquare}>
-            
-            {allCircleNames}
-
-          </div>
-        </div>
+        
         
      </nav>   )
 };
