@@ -65,3 +65,14 @@
     width: 7vw;
     height: 4vh;
 }
+
+.selectedPage {
+    color: gold;
+}
+#div_pagesNumbers span {
+    margin-left: 2vw;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+
