@@ -2,6 +2,7 @@ const FOLLOW = 'FOLLOW';
 const UNFOLLOW = 'UNFOLLOW';
 const SET_USERS = 'SET_USERS';
 const SET_CURRENT_PAGE = 'SET_CURRENT_PAGE';
+const SET_TOTAL_USERS_COUNT = 'SET_TOTAL_USERS_COUNT';
 
 
 let initialState = {
@@ -11,7 +12,7 @@ let initialState = {
           //  {id: 3, photoUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSu5d12BbxJeBRtoDeifScpR0ywqs3-T5RAWA&usqp=CAU', followed: false, fullName: 'Jean', status: 'I am a boss too', location: {city: 'Kiev', country: 'Ukraine'} }
            ],
           pageSize: 5,
-          totalUsersCount: 21,
+          totalUsersCount: 0,
           currentPage: 1
 };
 
@@ -47,6 +48,10 @@ const usersReducer = (state = initialState, action) => {
         case SET_CURRENT_PAGE: {
                 return { ...state, currentPage: action.currentPage };
         }
+        case SET_TOTAL_USERS_COUNT: {
+          return { ...state, totalUsersCount: action.count };
+        }
+        
         //rasshifrovka zapisi sverhu:
         //1.prihodit spisok polzovatelej,(s servera naprimer)
         //2.beru starij state i delau kopiu: ...state
@@ -62,5 +67,7 @@ export const followAC = (userID) => ({type: FOLLOW, userID});
 export const unfollowAC = (userID) => ({type: UNFOLLOW, userID});
 export const setUsersAC = (users) => ({type: SET_USERS, users});
 export const setCurrentPageAC = (currentPage) => ({type: SET_CURRENT_PAGE, currentPage});
+export const setTotalUsersCountAC = (totalUsersCount) => ({type: SET_TOTAL_USERS_COUNT, count: totalUsersCount});
+
 
 export default usersReducer;
