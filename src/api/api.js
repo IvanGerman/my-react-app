@@ -22,13 +22,32 @@ export const usersAPI = {
         return instance.delete(`follow/${id}`)
     },
     getProfile(userId) {
-        return instance.get(`profile/` + userId)
+        console.warn("Obsolete method.Please, use profileAPI object");
+        return profileAPI.getProfile(userId);//peredelegiruem na profileAPI
+    }
+};
+
+export const profileAPI = {
+    getProfile(userId) {
+        return instance.get(`profile/` + userId);
+    },
+    getStatus(userId) {
+        return instance.get(`profile/status/` + userId);
+    },
+    updateStatus(status) {
+        return instance.put(`profile/status`, { status: status });
     }
 };
 
 export const authAPI = {
     me() {
-        return instance.get(`auth/me`)
+        return instance.get(`auth/me`);
+    },
+    login(email, password, rememberMe=false) {
+        return instance.post(`auth/login`, { email, password, rememberMe });
+    },
+    logout() {
+        return instance.delete(`auth/login`);
     }
 }
 

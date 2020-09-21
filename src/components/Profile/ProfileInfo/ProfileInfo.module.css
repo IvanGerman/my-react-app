@@ -8,8 +8,14 @@
 
 .descriptionBlock {
   padding: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 3fr;
 }
 .descriptionBlock img {
   max-width: 15vw;
   margin-right: 1vw;
+}
+
+.spanForStatus {
+  overflow-wrap: anywhere;
 }
