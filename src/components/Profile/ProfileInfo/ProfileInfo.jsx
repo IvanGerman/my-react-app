@@ -1,6 +1,7 @@
 import React from 'react';
 import s from './ProfileInfo.module.css';
 import ProfileStatus from './ProfileStatus';
+import ProfileStatusWithHooks from './ProfileStatusWithHooks';
 
 const ProfileInfo = (props) => {
     // snachala bilo return <Preloader />
@@ -12,7 +13,6 @@ const ProfileInfo = (props) => {
           </div>
           <div className = {s.descriptionBlock}>
             <img alt = "" src = "https://archilab.online/images/1/123.jpg" />
-            
           </div>
         </div>
       )
@@ -26,7 +26,7 @@ const ProfileInfo = (props) => {
         <div className = {s.descriptionBlock}>
           <div>
             <img alt = "" src = "https://archilab.online/images/1/123.jpg" />
-            <ProfileStatus status={props.status} updateStatus = {props.updateStatus}/>
+            <ProfileStatusWithHooks status={props.status} updateStatus = {props.updateStatus}/>
           </div>
           <img alt = "" src = {props.profile.photos.large} />
         </div>
