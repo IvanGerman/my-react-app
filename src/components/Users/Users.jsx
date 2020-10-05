@@ -2,27 +2,29 @@ import React from 'react';
 import styles from './Users.module.css';
 import userPhoto from '../../assets/images/userphoto.jpg';
 import { NavLink } from 'react-router-dom';
+import Paginator from '../common/Paginator/Paginator';
 
 
 let Users = (props) => {
   
-    let pagesCount = Math.ceil(props.totalUsersCount / props.pageSize)/100;
-        let pages = [];
-        for ( let i = 1; i <= pagesCount; i++) {
-            pages.push(i);
-        };
+    // let pagesCount = Math.ceil(props.totalUsersCount / props.pageSize)/100;
+    //     let pages = [];
+    //     for ( let i = 1; i <= pagesCount; i++) {
+    //         pages.push(i);
+    //     };
 
     return (
-        (
-            <div className={styles.super_wrapper}>
-                <div className={styles.div_top}>Users</div>
-                <div id={styles.div_pagesNumbers}>
-                    { pages.map( (p,i) => { 
-                        return <span key = {i} className={props.currentPage === p ? styles.selectedPage : undefined} onClick={ (e) => { props.onPageChanged(p); } }>{p}</span>
-
+        (<div className={styles.super_wrapper}>
+            <Paginator currentPage={props.currentPage} totalUsersCount={props.totalUsersCount} pageSize={props.pageSize} onPageChanged={props.onPageChanged} />
+            {/* <div className={styles.div_top}>Users</div>
+            <div id={styles.div_pagesNumbers}>
+                { pages.map( (p,i) => { 
+                    return <span key = {i} className={props.currentPage === p ? styles.selectedPage : undefined} onClick={ (e) => { props.onPageChanged(p); } }>{p}</span>
                     })
-                    }                    
-                </div>
+                }                    
+            </div> */}
+
+
                 <div className={styles.users_wrapper}>
         
                     { props.users.map( u => 
@@ -54,11 +56,9 @@ let Users = (props) => {
                         </div>
                     </div> )
                     }
-                    
-                    
                 </div>
             </div>
-            )
+        )
     )
 }  
 
