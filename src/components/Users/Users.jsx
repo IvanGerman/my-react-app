@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './Users.module.css';
 import userPhoto from '../../assets/images/userphoto.jpg';
 import { NavLink } from 'react-router-dom';
-import Paginator from '../common/Paginator/Paginator';
+import Paginator2 from '../common/Paginator/Paginator2';
 
 
 let Users = (props) => {
@@ -15,7 +15,7 @@ let Users = (props) => {
 
     return (
         (<div className={styles.super_wrapper}>
-            <Paginator currentPage={props.currentPage} totalUsersCount={props.totalUsersCount} pageSize={props.pageSize} onPageChanged={props.onPageChanged} />
+            <Paginator2 currentPage={props.currentPage} totalUsersCount={props.totalUsersCount} pageSize={props.pageSize} onPageChanged={props.onPageChanged} />
             {/* <div className={styles.div_top}>Users</div>
             <div id={styles.div_pagesNumbers}>
                 { pages.map( (p,i) => { 

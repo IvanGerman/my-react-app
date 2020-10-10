@@ -1,4 +1,4 @@
-import { createStore, combineReducers, applyMiddleware }  from "redux" ;
+import { createStore, combineReducers, applyMiddleware, compose }  from "redux" ;
 import dialogsReducer from "./dialogs-reducer";
 import profileReducer from "./profile-reducer";
 import sidebarReducer from "./sidebar-reducer";
@@ -18,9 +18,13 @@ let reducers = combineReducers( {
     form: formReducer,
     app: appReducer
 });
+// sozdaem store dla react dev tools
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose ;
+const store = createStore(reducers, composeEnhancers(applyMiddleware(thunkMiddleware)
+));
+// sozdaem store obichnij
+//let store = createStore(reducers, applyMiddleware(thunkMiddleware));
 
-let store = createStore(reducers, applyMiddleware(thunkMiddleware));
-
-window.store = store;
+window.__store__ = store;
 
 export default store;

@@ -4,7 +4,7 @@ import styles from './Paginator.module.css';
 
 let Paginator = (props) => {
   
-    let pagesCount = Math.ceil(props.totalUsersCount / props.pageSize)/100;
+    let pagesCount = Math.ceil(props.totalUsersCount / props.pageSize);
         let pages = [];
         for ( let i = 1; i <= pagesCount; i++) {
             pages.push(i);
